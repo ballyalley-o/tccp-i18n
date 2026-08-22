@@ -34,7 +34,7 @@ const readPackageConfig = async (): Promise<PackageJson['tccpI18n']> => {
 }
 
 const readArgs = () => {
-  const args = process.argv.slice(2)
+  const args                             = process.argv.slice(2)
   const config: Partial<LocaleCliConfig> = {}
 
   args.forEach((arg) => {
