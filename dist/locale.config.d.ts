@@ -1,0 +1,152 @@
+import { en } from './message/index.js';
+export declare const locales: {
+    readonly en: {
+        readonly client: {};
+        readonly server: {
+            readonly response: {
+                readonly exists: "{entity} already exists";
+                readonly db_saved: "new {entity} has been saved to the database";
+                readonly success: {
+                    readonly status_200: "OK: Request fetched";
+                    readonly status_201: "CREATED: Request created";
+                    readonly status_204: "NO CONTENT: The server successfully processed the request but there is no content to send in the response.";
+                    readonly photo_uploaded: "OK: Photo Uploaded";
+                    readonly badge_uploaded: "OK: Badge Uploaded";
+                    readonly avatar_uploaded: "OK: Avatar Uploaded";
+                    readonly courses_deleted: "Courses being deleted from bootcamp ID: {id}. Reload page to see the effect";
+                    readonly collection_seed: " MOCK MIGRATION SUCCESSFUL ";
+                    readonly collection_destroyed: " COLLECTION/s DESTROYED ";
+                    readonly logout: "User logged out";
+                    readonly updated: "Entity updated";
+                    readonly deleted: "Entity deleted";
+                    readonly deleted_account: "Your account has been deleted.";
+                    readonly email_sent: "Email sent";
+                    readonly nodemailer_message: " Message sent: %s ";
+                };
+                readonly error: {
+                    readonly status_400: "BAD REQUEST: Client request is Invalid";
+                    readonly status_401: "UNAUTHORIZED: Request cannot be granted unless Client is Authenticated";
+                    readonly status_403: "FORBIDDEN: Necessary permissions is required to access the Requested Resource";
+                    readonly status_404: "NOT FOUND: Resource requested cannot be found";
+                    readonly status_422: "UNPROCESSABLE ENTITY: The data submitted in a form is in the wrong format or is missing required fields";
+                    readonly status_429: "REQUEST OVERLOAD: Throttling limit exceeded for an API";
+                    readonly status_500: "INTERNAL SERVER ERROR: Server encountered an Unhandled Exception";
+                    readonly status_503: "SERVICE UNAVAILABLE: The server is temporarily unable to handle the Request";
+                    readonly status_504: "GATEWAY TIMEOUT: The server acting as a gateway did not receive a timely response from an upstream server";
+                    readonly account_deleted: "Account has been deleted";
+                    readonly account_scheduled_delete: "Account is already scheduled for deletion.";
+                    readonly cors_not_allowed: "CORS ERROR: Not allowed by Access-Control-Allow-Origin";
+                    readonly entity_exists: "Entity already exists";
+                    readonly invalid_start_date: "Please select a valid start date";
+                    readonly invalid_start_date_past: "Start date cannot be in the past";
+                    readonly is_required: "{field} is required.";
+                    readonly org_required: "Organization is required for Admin";
+                    readonly already_exists: "{entity} already exists";
+                    readonly one_feedback: "Only one feedback per user is allowed";
+                    readonly not_enrolled_course: "You are not enrolled in this course";
+                    readonly not_found_top_bootcamps: "Top bootcamps not found";
+                    readonly not_found_bootcamp: "Bootcamp not found with id of {id}";
+                    readonly not_found_course: "Course not found with id of {id}";
+                    readonly not_found_enrollment: "Enrollment not found with id of {id}";
+                    readonly not_found_feedback: "No feedback found with the id {id}";
+                    readonly not_found: "There is no user with id {id}";
+                    readonly bootcamp_already_published: "The user with ID {id} has already published a bootcamp";
+                    readonly failed_upload: " Please upload a file ";
+                    readonly failed_upload_avatar: " Please upload an avatar ";
+                    readonly failed_filesize: "File size cannot exceed {fileSize}";
+                    readonly failed_seed: " FAILED TO SEED COLLECTION/s SEED ";
+                    readonly failed_destroy: " FAILED TO DESTROY COLLECTION/s ";
+                    readonly failed_delete: " FAILED TO DELETE ENTITY ";
+                    readonly failed_delete_account: " Failed to delete your account ";
+                    readonly failed_find: " FAILED TO FIND ENTITY ";
+                    readonly failed_create: " FAILED TO CREATE ENTITY ";
+                    readonly failed_update: " FAILED TO UPDATE ENTITY ";
+                    readonly failed_register: " FAILED TO REGISTER ";
+                    readonly failed_login: " FAILED TO LOGIN ";
+                    readonly failed_logout: " FAILED TO LOGOUT ";
+                    readonly invalid_credential: "Please provide a valid email and password";
+                    readonly invalid_password: "Invalid password";
+                    readonly invalid_token: "Invalid token";
+                    readonly nodemailer_message: " Error occurred: %s ";
+                    readonly not_student: "User {user} is not a student";
+                    readonly not_owner: "User {user} is unauthorized to update course {entity}";
+                    readonly role_not_allowed: "Current role {role} is unauthorized to access this route";
+                    readonly parse_err: "Error parsing JSON: {error}";
+                    readonly not_instance: "This class cannot be instantiated";
+                    readonly session_expired: "Session has expired";
+                    readonly static_class: "This is a static class";
+                    readonly failed_email: "Email could not be sent";
+                    readonly reset_subject: "Password Reset Request";
+                    readonly reset_message: "A request has been made to reset your password. If you made this request, please copy the following code into the prompt in: \n\n {resetUrl} to verify your identity.";
+                };
+            };
+            readonly schema: {
+                readonly name: "Please add a bootcamp name/title";
+                readonly max_length_name: "Name can not be more than 50 characters";
+                readonly description: "Please add a description";
+                readonly min_length_description: "Description can not be less than 20 characters";
+                readonly max_length_description: "Description can not be more than 250 characters";
+                readonly url: "Please use a valid URL with HTTP or HTTPS";
+                readonly max_length_phone: "Phone number can not be longer than 20 characters";
+                readonly email: "Please add a valid email";
+                readonly address: "Please add an address";
+                readonly duration: "Please add a duration";
+                readonly average_rating_min: "Rating must be at least 1";
+                readonly average_rating_max: "Rating must can not be more than 10";
+                readonly careers: "Please add one or more careers";
+                readonly course_title: "Please add a course title";
+                readonly course_week: "Please add number of weeks";
+                readonly course_tuition: "Please add a tuition cost";
+                readonly minimum_skill: "Please add a minimum skill";
+                readonly feedback_title: "Please add a title to your Feedback";
+                readonly feedback_rating: "Please rating is required";
+                readonly first_name: "Please provide your first name";
+                readonly last_name: "Please provide your family/last name";
+                readonly password: "Please add a password";
+            };
+            readonly success: {
+                readonly ok: "OK: Request fetched";
+                readonly created: "CREATED: Request created";
+                readonly updated: "Entity updated";
+                readonly deleted: "Entity deleted";
+                readonly logout: "User logged out";
+            };
+            readonly error: {
+                readonly bad_request: "Client request is invalid.";
+                readonly unauthorized: "You must be authenticated to access this resource.";
+                readonly forbidden: "You do not have permission to access this resource.";
+                readonly not_found: "Resource not found.";
+                readonly route_not_found: "Route not found: {path}";
+                readonly validation_failed: "Validation failed.";
+                readonly account_deleted: "Account has been deleted.";
+                readonly session_expired: "Session has expired.";
+                readonly invalid_credential: "Please provide a valid email and password.";
+                readonly already_exists: "{entity} already exists.";
+                readonly role_not_allowed: "Current role {role} is unauthorized to access this route.";
+                readonly required: "{field} is required.";
+            };
+        };
+    };
+    readonly es: {
+        readonly client: {};
+        readonly server: {};
+    };
+    readonly fr: {
+        readonly client: {};
+        readonly server: {};
+    };
+    readonly ja: {
+        readonly client: {};
+        readonly server: {};
+    };
+};
+export type LocaleLang = keyof typeof locales;
+export type AppLocale = typeof en;
+export type NestedKeys<T> = {
+    [K in keyof T & string]: T[K] extends string ? K : T[K] extends Record<string, unknown> ? `${K}.${NestedKeys<T[K]>}` : never;
+}[keyof T & string];
+export type LocaleKey = NestedKeys<AppLocale>;
+export type LocaleParams = Record<string, string | number | boolean>;
+export declare const DEFAULT_LOCALE: LocaleLang;
+export declare function isSupportedLocale(locale: unknown): locale is LocaleLang;
+//# sourceMappingURL=locale.config.d.ts.map
