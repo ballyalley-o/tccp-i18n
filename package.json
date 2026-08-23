@@ -1,17 +1,17 @@
 {
-  "name"       : "@tccp/i18n",
-  "version"    : "0.1.0",
+  "name": "@tccp/i18n",
+  "version": "0.1.0",
   "description": "Type-safe shared localization contract for TCCP client UI copy and server API messages.",
-  "type"       : "module",
-  "main"       : "./dist/index.js",
-  "types"      : "./dist/index.d.ts",
-  "files"      : [
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
     "dist"
   ],
   "scripts": {
-    "build"         : "tsc --project tsconfig.json",
-    "locsync"       : "tsx cli/locale-sync.ts",
-    "locale:check"  : "tsx cli/locale-check.ts",
+    "build": "tsc --project tsconfig.json",
+    "locsync": "tsx cli/locale-sync.ts",
+    "locale:check": "tsx cli/locale-check.ts",
     "prepublishOnly": "npm run locale:check && npm run build"
   },
   "publishConfig": {
@@ -21,10 +21,9 @@
     "sourceLocale": "en",
     "targetLocales": []
   },
-  "dependencies"   : {},
   "devDependencies": {
-    "google-translate-api-x": "^10.7.2",
-    "tsx"                   : "^4.20.6",
-    "typescript"            : "^5.7.3"
+    "google-translate-api-x": "^10.7.3",
+    "tsx": "^4.20.6",
+    "typescript": "^5.7.3"
   }
 }
