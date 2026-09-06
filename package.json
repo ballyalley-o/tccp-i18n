@@ -1,6 +1,6 @@
 {
   "name": "tccp/i18n",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Type-safe shared localization contract for TCCP client UI copy and server API messages.",
   "type": "module",
   "main": "./dist/index.js",
