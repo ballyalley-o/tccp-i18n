@@ -1,5 +1,5 @@
 {
-  "name": "@tccp/i18n",
+  "name": "@ballyalley-o/i18n",
   "version": "0.1.0",
   "description": "Type-safe shared localization contract for TCCP client UI copy and server API messages.",
   "type": "module",
