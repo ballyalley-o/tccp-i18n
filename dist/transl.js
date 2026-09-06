@@ -1,4 +1,5 @@
-import { DEFAULT_LOCALE, locales } from './locale.config.js';
+import { locales } from './locales.js';
+export const DEFAULT_LOCALE = 'en';
 const getMessage = (obj, path) => path.split('.').reduce((o, i) => (o && typeof o === 'object' && i in o ? o[i] : null), obj);
 export const transl = (key, params, locale = DEFAULT_LOCALE) => {
     const localeMessage = getMessage(locales[locale], key);
