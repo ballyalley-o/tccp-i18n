@@ -1,34 +1,14 @@
 import fs                                       from 'node:fs/promises'
 import path                                     from 'node:path'
 import { pathToFileURL }                        from 'node:url'
-import translate                                from 'google-translate-api-x'
 import { getLocaleCliConfig, localeExportName } from './locale.config.js'
+import { translateText }                        from '../dist/google-translate.lib.js'
 
 type LocaleObject = Record<string, LocaleObject | string>
 
 const { sourceLocale, targetLocales, messagesDir } = await getLocaleCliConfig()
 const sourceModule                                 = await import(pathToFileURL(path.join(messagesDir, `${sourceLocale}.ts`)).href)
 const sourceMessages                               = sourceModule[localeExportName(sourceLocale)] as LocaleObject
-
-const placeholders = (value: string) => Array.from(new Set(value.match(/\{[A-Za-z0-9_]+\}/g) || []))
-
-async function translateText(input: string, lang: string): Promise<string> {
-  const params   = placeholders(input)
-  let   safeText = input
-
-  params.forEach((param, index) => {
-    safeText = safeText.replace(new RegExp(param, 'g'), `__LOCALE_PARAM_${index}__`)
-  })
-
-  const res  = await translate(safeText, { to: lang })
-  let   text = (res as { text: string }).text
-
-  params.forEach((param, index) => {
-    text = text.replace(new RegExp(`__LOCALE_PARAM_${index}__`, 'g'), param)
-  })
-
-  return text
-}
 
 async function loadLocale(lang: string): Promise<LocaleObject> {
   const filePath = path.join(messagesDir, `${lang}.ts`)
