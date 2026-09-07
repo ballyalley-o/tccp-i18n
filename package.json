@@ -15,7 +15,7 @@
     "prepublishOnly": "npm run locale:check && npm run build"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "tccpI18n": {
     "sourceLocale": "en",
