@@ -2,7 +2,9 @@ import path                                     from 'node:path'
 import { pathToFileURL }                        from 'node:url'
 import { getLocaleCliConfig, localeExportName } from './locale.config.js'
 
-type LocaleObject = Record<string, LocaleObject | string>
+interface LocaleObject {
+  [key: string]: LocaleObject | string
+}
 
 const { sourceLocale, targetLocales, messagesDir } = await getLocaleCliConfig()
 const sourceModule                                 = await import(pathToFileURL(path.join(messagesDir, `${sourceLocale}.ts`)).href)

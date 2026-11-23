@@ -1,9 +1,9 @@
-import { locales } from "./locales.ts"
+import type { locales } from './locales.js'
 
 declare global {
     type LocaleLang = keyof typeof locales
 
-    type AppLocale = typeof en
+    type AppLocale = typeof locales.en
 
     type NestedKeys<T> = {
       [K in keyof T & string]: T[K] extends string

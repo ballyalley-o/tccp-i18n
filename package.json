@@ -10,8 +10,8 @@
   ],
   "scripts": {
     "build": "tsc --project tsconfig.json",
-    "locsync": "tsx cli/locale-sync.ts",
-    "locale:check": "tsx cli/locale-check.ts",
+    "locsync": "tsx tool/locale-sync.ts",
+    "locale:check": "tsx tool/locale-check.ts",
     "prepublishOnly": "npm run locale:check && npm run build"
   },
   "publishConfig": {

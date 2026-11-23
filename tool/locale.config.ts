@@ -66,7 +66,7 @@ const discoverTargetLocales = async (messagesDir: string, sourceLocale: string) 
 export const localeExportName = (locale: string) => locale.replace(/-/g, '_')
 
 export async function getLocaleCliConfig(): Promise<LocaleCliConfig> {
-  const packageConfig     = await readPackageConfig()
+  const packageConfig     = await readPackageConfig() || {}
   const argConfig         = readArgs()
   const sourceLocale      = argConfig.sourceLocale || packageConfig.sourceLocale || 'en'
   const messagesDir       = argConfig.messagesDir || path.resolve(packageRoot, packageConfig.messagesDir || 'src/message')

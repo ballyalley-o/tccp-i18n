@@ -1,4 +1,4 @@
-import { locales } from './locales.js'
+import { locales, type LocaleKey, type LocaleLang, type LocaleParams } from './locales.js'
 
 export const DEFAULT_LOCALE: LocaleLang = 'en'
 
